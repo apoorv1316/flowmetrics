@@ -38,8 +38,8 @@ export default function Navbar() {
             ))}
             
             <motion.button
-              className="px-5 py-2 lg:px-6 lg:py-3 bg-white text-white-900 rounded-full font-medium text-base lg:text-lg"
-              whileHover={{ scale: 1.05 }}
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get Started
@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white text-2xl"
+              className="text-white text-2xl bg-gradient-to-r from-purple-500 to-blue-500 hover:scale-105 transition"
             >
               {isOpen ? "✕" : "☰"}
             </button>
@@ -61,7 +61,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <motion.div 
-          className="md:hidden bg-blue-800"
+          className="md:hidden bg-white/10 "
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
         >
@@ -75,11 +75,6 @@ export default function Navbar() {
                 {item}
               </a>
             ))}
-            <div className="px-3 py-3">
-              <button className="w-full px-4 py-2 bg-white text-blue-900 rounded-full font-medium">
-                Get Started
-              </button>
-            </div>
           </div>
         </motion.div>
       )}

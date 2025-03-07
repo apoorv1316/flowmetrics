@@ -72,7 +72,7 @@ export default function HeroSection() {
           transition={{ delay: 0.6, duration: 0.8 }}
         >
           <motion.button
-            className="px-6 py-3 sm:px-8 md:px-10 lg:px-12 md:py-4 text-base md:text-lg lg:text-xl bg-white text-white-900 font-semibold rounded-full shadow-lg hover:shadow-xl transition duration-300"
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -80,8 +80,8 @@ export default function HeroSection() {
           </motion.button>
           
           <motion.button
-            className="px-6 py-3 sm:px-8 md:px-10 lg:px-12 md:py-4 text-base md:text-lg lg:text-xl bg-transparent border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white/10 transition duration-300"
-            whileHover={{ scale: 1.05 }}
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Watch Demo

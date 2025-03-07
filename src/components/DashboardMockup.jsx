@@ -70,7 +70,7 @@ export default function DashboardMockup() {
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <div className="mx-auto bg-white/10 rounded-full px-4 py-1 text-xs text-white/70">analytics-dashboard.app</div>
+        <div className="mx-auto bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full px-4 py-1 text-xs">analytics-dashboard.app</div>
       </div>
       
       {/* Dashboard content */}
@@ -80,11 +80,6 @@ export default function DashboardMockup() {
           <div>
             <h3 className="text-white text-lg sm:text-xl font-bold">Analytics Dashboard</h3>
             <p className="text-white/60 text-xs">Real-time performance metrics</p>
-          </div>
-          <div className="flex space-x-2 text-[10px] sm:text-xs">
-            <button className="bg-white/10 hover:bg-white/20 text-white px-2 sm:px-3 py-1 rounded-md transition">Today</button>
-            <button className="bg-purple-600 text-white px-2 sm:px-3 py-1 rounded-md">This Week</button>
-            <button className="bg-white/10 hover:bg-white/20 text-white px-2 sm:px-3 py-1 rounded-md transition hidden sm:block">This Month</button>
           </div>
         </div>
         
