@@ -18,7 +18,7 @@ export default function Navbar() {
               className="text-white font-bold text-xl lg:text-2xl"
               whileHover={{ scale: 1.05 }}
             >
-              YourBrand
+              Analytics
             </motion.div>
           </div>
           
