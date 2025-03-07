@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import DashboardMockup from "./DashboardMockup";
 
 export default function HeroSection() {
   return (
@@ -110,62 +111,20 @@ export default function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Hero Image (Dashboard Mockup) - Improved version */}
+        {/* Dashboard container with better mobile responsiveness */}
         <motion.div
-          className="mt-16 relative w-full max-w-4xl lg:max-w-5xl mx-auto px-4 mb-16"
+          className="mt-10 sm:mt-16 relative w-full max-w-4xl lg:max-w-5xl mx-auto px-2 sm:px-4 mb-10 sm:mb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          {/* Subtle glow effect behind image */}
+          {/* Subtle glow effect behind dashboard */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-purple-600/30 blur-3xl opacity-50 rounded-2xl transform scale-105 -z-10"></div>
           
-          {/* Main dashboard image with better styling */}
-          <div className="relative overflow-hidden rounded-xl border border-white/20 shadow-[0_0_15px_rgba(124,58,237,0.5)]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/80 to-purple-900/80 backdrop-blur-sm"></div>
-              <img
-                src="https://cdn.prod.website-files.com/66adf3f56fcddd56d4f6b0eb/66b4a5763f3175cf91c5fb71_dash%20(1).svg"
-                alt="Dashboard Preview"
-                className="relative w-full object-cover"
-              />
-              
-            {/* Subtle overlay for better integration */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent pointer-events-none"></div>
-          </div>
+          {/* Animated Dashboard Component */}
+          <DashboardMockup />
           
-          {/* Decorative elements - more subtle and integrated */}
-          <motion.div
-            className="absolute -top-6 -right-6 bg-gradient-to-br from-purple-500 to-pink-500 p-3 rounded-lg shadow-lg hidden md:block"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-          >
-            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-              <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-            </svg>
-          </motion.div>
-          
-          {/* Notification badge */}
-          <motion.div
-            className="absolute -bottom-4 -left-4 bg-gradient-to-br from-blue-500 to-cyan-500 px-3 py-1 rounded-full text-white text-sm font-medium shadow-lg hidden md:flex items-center space-x-1"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.7, duration: 0.5 }}
-          >
-            <span className="w-2 h-2 bg-white rounded-full"></span>
-            <span>Live Data</span>
-          </motion.div>
-          
-          {/* Floating card - more integrated with the design */}
-          <motion.div
-            className="absolute top-1/3 -right-10 bg-white/10 backdrop-blur-md p-3 rounded-lg border border-white/20 shadow-xl hidden lg:block"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.9, duration: 0.5 }}
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          >
-          </motion.div>
+          {/* Notification badge - hidden on very small screens */}
         </motion.div>
       </div>
       
