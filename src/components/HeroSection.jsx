@@ -3,36 +3,10 @@ import DashboardMockup from "./DashboardMockup";
 
 export default function HeroSection() {
   return (
-    <div id="home" className="relative min-h-screen w-full flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-900 to-purple-800 text-white px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20">
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-white/10"
-            style={{
-              width: Math.random() * 100 + 50,
-              height: Math.random() * 100 + 50,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, Math.random() * 100 - 50],
-              x: [0, Math.random() * 100 - 50],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
+    <div id="home" className="relative min-h-screen w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20">
       
       {/* Content container */}
-      <div className="relative z-10 w-full mx-auto">
+      <div className="relative z-10 max-w-7xl w-full mx-auto">
         {/* Badge */}
         <motion.div
           className="inline-block mb-6 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm md:text-base font-medium"
