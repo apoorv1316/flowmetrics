@@ -3,7 +3,8 @@ import Navbar from './Navbar';
 import HeroSection from './HeroSection';
 import Testimonials from './Testimonials';
 import Faq from './Faq';
-
+import FeaturesDashboard from './FeaturesDashboard';
+import Footer from './Footer';
 export default function HomePage() {
   return (
     
@@ -38,8 +39,10 @@ export default function HomePage() {
       <div className="relative z-10">
         <Navbar />
         <HeroSection />
+        <FeaturesDashboard />
         <Testimonials />
         <Faq />
+        <Footer />
       </div>
     </div>
   );
