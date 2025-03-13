@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,22 +25,39 @@ export default function Navbar() {
           
           <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
             {["Home", "Features", "Showcase", "Pricing", "Contact"].map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-white hover:text-purple-300 transition-colors text-base lg:text-lg"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <p className="text-white">
-                {item}
-                </p>
-              </motion.a>
+              item === "Showcase" ? (
+                <motion.div key={item}>
+                  <Link
+                    to="/showcase"
+                    className="text-white hover:text-purple-300 transition-colors text-base lg:text-lg"
+                  >
+                    <motion.p 
+                      className="text-white"
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {item}
+                    </motion.p>
+                  </Link>
+                </motion.div>
+              ) : (
+                <motion.a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-white hover:text-purple-300 transition-colors text-base lg:text-lg"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <p className="text-white">
+                    {item}
+                  </p>
+                </motion.a>
+              )
             ))}
             
             <motion.button
-          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 transition"
-          whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 transition"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get Started
@@ -67,13 +85,23 @@ export default function Navbar() {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {["Home", "Features", "Showcase", "Pricing", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item}
-              </a>
+              item === "Showcase" ? (
+                <Link
+                  key={item}
+                  to="/showcase"
+                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  {item}
+                </Link>
+              ) : (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  {item}
+                </a>
+              )
             ))}
           </div>
         </motion.div>

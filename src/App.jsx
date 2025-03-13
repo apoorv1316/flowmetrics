@@ -1,12 +1,16 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
-import FeaturesDashboard from './components/FeaturesDashboard'
+import ShowcasePage from './components/ShowcasePage'
+
 function App() {
   return (
-  <div className="min-h-screen w-full overflow-x-hidden bg-blue-900">
-    <HomePage />
-    {/* Other sections will be added here later */}
-  </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/showcase" element={<ShowcasePage />} />
+      </Routes>
+    </Router>
   )
 }
 
